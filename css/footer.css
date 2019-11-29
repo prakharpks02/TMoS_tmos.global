@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -46,4 +47,54 @@
   }
   .right_side i{
     color: #00F5DC;
+=======
+
+
+
+/* FOOTER */
+
+#footer{
+    position: relative;
+    top: 140vh;
+    min-height: 35vh;
+    padding: 0 100px;
+  }
+  .footer_container img{
+    height: 60px;
+    padding-top: 10px;
+  }
+  .footer_container p{
+    text-align: left;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.74);
+  }
+  
+  .links{
+    display: flex;
+  }
+  .left_side li{
+    padding: 7px 0;
+  }
+  .right_side{
+    float: right;
+    margin-left: 120px;
+  }
+  .right_side li{
+  padding: 15px 0;
+  font-size: 13px;
+  }
+  .right_side h1{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.74);
+  }
+  ul{
+    list-style: none;
+  }
+  .right_side a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .right_side i{
+    color: #00F5DC;
+>>>>>>> 8221d81718525ccc6d409cbe59aeed20b55e3759
   }

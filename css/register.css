@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+*{
+    box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%; 
+}
+section{
+    min-height: auto;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/* HEADER LOGO/BUTTON/Nav SETTINGS*/
+.header {
+    background: inherit;
+    height: 100px;
+    width: 100%;
+    padding: 20px 70px;
+    position: fixed;
+    z-index: 999;
+}
+.header_overlay{
+    z-index: 999;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.1);
+    background: rgba(0, 0, 0, 0.034);
+    backdrop-filter: blur(5px);
+}
+
+.header__logo{
+    width: auto;
+    height: 60px;
+    float: left;
+    z-index: 1;
+}
+
+/* MENU */
+.menu {
+    float: left;
+    padding: 20px ;
+    margin-left: 40px;
+  }
+  .menu a {
+    margin: 0px 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .link{
+    position: relative;
+  }
+  
+  .link:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #fff;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+   
+  .link:hover:after{
+    width: 100%;
+    left: 0;
+    background: #00F5DC;
+  }
+  .log_btn {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.74);
+    text-align: center;
+}
+  .log_btn {
+     
+      float: right;
+      padding: 17px ;
+      border: 1px solid #00F5DC;
+      width: 300px;
+      height: auto;
+      background: #00F5DC;
+      border-radius: 40px;
+      transition: 0.3s;
+  }
+  .log_btn:hover{
+    padding: 13px 17px ;
+  }
+
+
+
+
+  /* REGISTRATION FORM */
+
+
+
+
+
+
+#form{
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  font-family: 'Raleway', sans-serif;
+  margin: auto;
+}
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+  font-size: 45px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  font-weight: 600;
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #ccfdf8;
+  color: black;
+  box-shadow: 0 1px 0 #00F5DC inset;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;       /* Remove default arrow */
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ccfdf8;   /* Add custom arrow */
+  background-position-x: 410px;
+}
+select::-ms-expand {
+  display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+}
+ option{
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #00F5DC;
+  font-size: 25px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid rgb(2, 214, 193);
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border: none;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #00F5DC;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 480px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+#footer{
+    position: absolute;
+    top: 120vh;
+    height: 35vh;
+    padding: 0 100px;
+  }
+  .footer_container img{
+    height: 60px;
+    padding-top: 10px;
+  }
+  .footer_container p{
+    text-align: left;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.74);
+  }
+  
+  .links{
+    display: flex;
+  }
+  .left_side li{
+    padding: 7px 0;
+  }
+  .right_side{
+    float: right;
+    margin-left: 120px;
+  }
+  .right_side li{
+  padding: 15px 0;
+  font-size: 13px;
+  }
+  .right_side h1{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.74);
+  }
+  ul{
+    list-style: none;
+  }
+  .right_side a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.74);
+  }
+  .right_side i{
+    color: #00F5DC;
+  }

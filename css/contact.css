@@ -358,3 +358,25 @@ ul {
 .right_side i {
 	color: #00f5dc;
 }
+  /* MOBILE VIEW */
+
+  @media screen and (max-width: 640px){
+	#footer{
+	  position: relative;
+	  top: 40vh;
+	  padding:0;
+	  left: 0;
+	  right: 0;
+	  margin: auto;
+	  width: 100%;
+	}
+	.left_side{
+	  display: none;
+	}
+	.right_side{
+	  float: left;
+	  margin: 0;
+	  padding: 0 20px;
+	}
+  
+  }

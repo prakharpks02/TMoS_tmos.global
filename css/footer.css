@@ -47,3 +47,36 @@
   .right_side i{
     color: #00F5DC;
   }
+
+
+
+   /* MOBILE VIEW */
+
+@media screen and (max-width: 640px){
+  #footer{
+    position: relative;
+    top: 40vh;
+    width: 100%;
+    height: auto;
+  }
+  .left_side{
+    display: none;
+  }
+  .links{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+  }
+  .links ul{
+    padding: 0 20px;
+  }
+  .right_side{
+   margin-left: 0px;
+  }
+
+  .right_side li{
+    top: 10px;
+  }
+
+}

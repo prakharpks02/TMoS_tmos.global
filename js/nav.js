@@ -1,8 +1,8 @@
 
 
-$('.menu-toggle').click(function(){
-   $(".nav").toggleClass("mobile-nav");
-   $(this).toggleClass("is-active");
+$('.menu-toggle').click(function () {
+  $(".nav").toggleClass("mobile-nav");
+  $(this).toggleClass("is-active");
 });
 
 
@@ -17,26 +17,26 @@ $('.menu-toggle').click(function(){
 
 
 $('.hover_me').hover(
-   function(){$('.hover_options').css('display', 'block')}
- );
+  function () { $('.hover_options').css('display', 'block') }
+);
 
- $('.navigation').hover(
-   function(){$('.hover_options').css('display', 'none')}
- );
+$('.navigation').hover(
+  function () { $('.hover_options').css('display', 'none') }
+);
 
 
 
- 
-$(document).ready(function(){ 
-  $(window).scroll(function(){ 
-      if ($(this).scrollTop() > 100) { 
-          $('#auto_scroll').fadeIn(); 
-      } else { 
-          $('#auto_scroll').fadeOut(); 
-      } 
-  }); 
-  $('#auto_scroll').click(function(){ 
-      $("html, body").animate({ scrollTop: 0 }, 600); 
-      return false; 
-  }); 
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#auto_scroll').fadeIn();
+    } else {
+      $('#auto_scroll').fadeOut();
+    }
+  });
+  $('#auto_scroll').click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
 });

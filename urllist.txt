@@ -1,7 +1,0 @@
-http://tmos.global/
-http://tmos.global/index.html
-http://tmos.global/about.html
-http://tmos.global/team.html
-http://tmos.global/contact.html
-http://tmos.global/register.html
-http://tmos.global/dashboard.html

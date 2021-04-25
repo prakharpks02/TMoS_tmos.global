@@ -1,272 +1,638 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147998619-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-147998619-1');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title> TMoS - Intelligent Hyperlocal Delivery Platform</title>
-
-    <meta name="description" content="TMoS provides door to door as well as bulk delivery services to eCommerce Companies and Businesses. TMoS provides complete logistics solution for all kinds of products." />
-
-    <meta name="keywords" content="TMoS, Intelligent Hyperlocal Delivery Platform, Delivery in Mumbai, Delivery Partner, Reliable Delivery, Delivery Platform, Convinient Delivery, Cost Effective Delivery, Cheap Delivery" />
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
-    <link rel="icon" href="png/favicon.png" type="image/png" sizes="16x16">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <script type='application/ld+json'>
-        {
-        "@context": "http://www.schema.org",
-        "@type": "Organization",
-        "name": "TMoS Tech Pvt. Ltd. - Intelligent Hyperlocal Delivery Platform",
-        "description": "TMoS provides door to door as well as bulk delivery services to eCommerce Companies and Businesses. TMoS provides complete logistics solution for all kinds of products.",
-        "url": " http://tmos.global/",
-        "sameAs": [
-        "https://www.facebook.com/tmos.global/",
-        "https://www.linkedin.com/company/14617893/",
-        
-        ],
-        "logo": "http://tmos.global/png/TMos%20Logo-21.png",
-        "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "314, Monash Building,",
-        "addressLocality": "IIT Bombay Campus, Powai,",
-        "addressRegion": "Mumbai, Maharastra",
-        "postalCode": "400076",
-        "addressCountry": "India"
-        }
-        }, {
-        
-        "@context": "http://schema.org",
-        
-        "@type": "Organization",
-        
-        "name": "TMoS - Intelligent Hyperlocal Delivery Platform",
-        
-        "description": "TMoS provides door to door as well as bulk delivery services to eCommerce Companies and Businesses. TMoS provides complete logistics solution for all kinds of products.",
-        
-        "telephone": "+91-8879138857",
-        
-        "sameAs": "http://tmos.global/",
-        
-        "email": " info@tmos.global",
-        
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>HOME</title>
 </head>
 
+<body id="myScroll">
+  <a href="#" id="auto_scroll" style="display: none;"><span></span></a>
+  <section class="navigation" style="overflow: hidden;">
+    <div class="page-wrapper">
+      <div class="nav-wrapper">
+        <div class="grad-bar"></div>
+        <nav class="navbar">
+          <img src="images/tmos_color.png" class="logo_desktop" alt="Company Logo">
+          <img src="images/tmos_color.png" class="logo_mobile" alt="Company Logo2">
+          <div class="menu-toggle" id="mobile-menu" style="z-index: 1000;">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav no-search">
 
-<body>
-  
+            <li class="nav-item"><a href="#">‎</a></li>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="platform.html">Platform</a></li>
+            <li class="nav-item"><a href="brand.html">Brand Builder</a></li>
+            <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            <li class="nav-item knowMore"><a href="" class="hover_me">Know more</a>
 
- 
-  <!-- /* HEADER LOGO/BUTTON/NAV SETTINGS*/ -->
+              <div class="hover_options" style="display: none;">
+                <div
+                  style="position: absolute; width: 120px; right: 40px; height: 100px;top: 80px; color: black; text-align: right;">
+                  <a href="team.html" style="color: white; margin-right: 10px; margin-top: 3px;">Our Team</a> <br>
+                  <a href="about.html" style="color: white; margin-right: 10px; margin-top: 10px;">About TMoS</a> <br>
+                  <a href="faq.html" style="color: white; margin-right: 10px; margin-top: 10px;">FAQ's</a>
+                </div>
+              </div>
 
-  <div class="header_overlay"></div>
+            </li><br>
+            <li class="nav-item2"><a href="faq.html">FAQ's</a></li>
+            <li class="nav-item2"><a href="about.html">About TMoS</a></li>
+            <li class="nav-item2"><a href="team.html">Our team</a></li>
+            <li class="nav-item2"><a href="#">Partners</a></li>
+            <li class="nav-item2"><a href="#">Media Coverage</a></li> <br>
+
+            <!-- <li class="nav-item4"><a href=""><img src="images/tmos_white.png" style="width: 150px; height: 50px;" alt=""></a></li>  -->
+
+            <li class="nav-item3">
+              <a href=""><img src="images/Playstore.png" style="width: 140px; height: 60px;" alt=""></a>
+              <a href=""><img src="images/Appstore.png" style="width: 140px; height: 60px;" alt=""></a>
+            </li>
+
+        </nav>
+        </ul>
 
 
-          <header class="header">
+
+      </div>
+  </section>
 
 
-            <a href="index.html"><img src="png/TMos Logo-21.png" class="header__logo" alt=""></a>
 
-            <div class="desktop_menu">
+  <section id="background">
 
-              <a href="http://platform.tmos.global">Dashboard</a>
-              <a href="about.html">About</a>
-              <a href="team.html">Team</a>
-              <a href="contact.html">Contact</a>
+    <div class="bg_text">
+      <h1>Delivery matters,<br>And a bad one comes at a cost</h1> <br>
+      <h5>Expand your base of happy customers <br> with our Reliable, Convenient and Cost-Effective
+        Hyperlocal Delivery service</h5> <br><br>
+      <a href="#" class="desk_reqBtn" onclick="on()">Request a Quote</a>
+      <div class="grad-bar"></div>
+      <img src="images/truck_home.png" class="comp_mobile" alt="">
+      <a href="#" class="mobile_reqBtn">Request a Quote</a>
+    </div>
 
+    <div id="homeOverlay">
+      <div id="overlay_container">
+        <i class="fa fa-times"
+          style="font-size: 50px; background-color: #fff; text-align: center; border: 5px solid #00ECE1; cursor: pointer; font-weight: lighter; border-radius: 50%; width: 65px; color: #00ECE1; margin-left: 98%; margin-top: -50px; z-index: 9999"
+          onclick="off()"></i>
+
+        <div class=wrapper>
+
+          <div class=left>
+            <ul id="step-menu">
+              <li class="from_address  active">
+                <div style="margin-left: 20px;">
+                  <p>From</p> <br>
+                  <div class="inputField_fromAddress">
+                    <input type="text" placeholder="Address" style="margin-bottom: 15px;">
+                    <div>
+                      <select name="" id="" style="width: 240px;">
+                        <option value="0">Select Country</option>
+                      </select>
+                      <input type="number" placeholder="PINCODE"
+                        style="width: 240px; height: 50px; border-radius: 10px; margin-left: 20px;">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="to_address">
+                <div style="margin-left: 20px;">
+                  <p>Destination</p> <br>
+                  <div class="inputField_fromAddress">
+                    <input type="text" placeholder="Address" style="margin-bottom: 15px;">
+                    <div>
+                      <select name="sdfef" id="" style="width: 240px;">
+                        <option value="0">Select Country:</option>
+                      </select>
+                      <input type="number" placeholder="PINCODE"
+                        style="width: 240px; height: 50px; border-radius: 10px; margin-left: 20px;">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="package_info">
+                <div style="margin-left: 20px;">
+                  <p>Package info</p> <br>
+                  <div class="inputField_fromAddress">
+                    <div style="display: flex;">
+                      <input type="text" placeholder="Address" style="width: 280px; margin-right: 10px;">
+                      <input type="text" placeholder="Weight" style="width: 100px; margin-right: 10px;">
+                      <div class="fragileBtn" style="display: flex; margin-top: 20px;"><label>
+                          <input type="checkbox" checked name="">
+                          <span>Fragile</span>
+                        </label></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="delivery_date">
+                <div style="margin-left: 20px;">
+                  <p>Delivery Slot</p> <br>
+                  <div class="inputField_fromAddress">
+                    <div style="display: flex;">
+                      <select name="sdfef" id="" style="width: 240px; margin-right: 20px;">
+                        <option value="0">Select Date</option>
+                      </select>
+                      <select name="sdfef" id="" style="width: 240px;">
+                        <option value="0">Select Date</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+              <button style="position: relative;">Calculate</button>
+            </ul>
+          </div>
+
+          <div class="overlayRight_container">
+            <p style="margin-left:50px; font-size: 20px;">Estimated Cost</p>
+            <div class="right_analytics">
+              <div class="cost_circle">
+                <h1>₹75</h1>
+              </div>
+              <p style="text-align: center; margin-top: 5px;">Price Range: ₹60 - ₹90</p>
             </div>
+            <div id="chart">
+              <p style="margin-left:30px; font-size: 18px;">This Week
+              <p>
 
-            <a href="register.html" class="log_btn">Become a Partner</a>
-
-
-          </header>
-
-          <div id="mobile">
-            
-            <a href="index.html" class="logo"><img src="png/TMos Logo-21.png" alt=""></a>
-            <a href="#" class="menuBtn">
-              <span class="lines"></span>
-            </a>
-            <div class="mainMenu">
-              <ul>
+              <ul id="bars">
                 <li>
-                  <a href="dashboard.html">Dashboard</a>
+                  <div data-percentage="56" class="bar"></div><span>date 1</span>
                 </li>
                 <li>
-                  <a href="about.html">About</a>
+                  <div data-percentage="33" class="bar"></div><span>date 2</span>
                 </li>
                 <li>
-                  <a href="team.html">Team</a>
+                  <div data-percentage="54" class="bar"></div><span>date 3</span>
                 </li>
                 <li>
-                  <a href="contact.html">Contact</a>
+                  <div data-percentage="94" class="bar"></div><span>date 4</span>
                 </li>
                 <li>
-                  <a href="register.html" class="suBtn">Become a Partner</a>
+                  <div data-percentage="44" class="bar"></div><span>date 5</span>
+                </li>
+                <li>
+                  <div data-percentage="23" class="bar"></div><span>date 6</span>
+                </li>
+                <li>
+                  <div data-percentage="43" class="bar"></div><span>date 7</span>
                 </li>
               </ul>
-          
             </div>
           </div>
 
+        </div>
 
-   <!-- /* BACKGROUND IMAGE/TEXT/BUTTON SETTINGS */ -->
-<section id="home">
-   <div class="bg_image">
-      <img src="png/Man With Laptop and Waves.png" class="bg_img" alt="">
-      <img src="png/Web UI Mockup.png" class="bg_img2" alt="">
-      <div class="bg_text">
-         <h1>TMoS PLATFORM</h1>
-         <h5>One step solution for all your delivery needs!<br><br><br>
-          The Intelligent Hyperlocal Delivery Platform <br>
-          powered by ALAN, our Proprietary AI System.</h5>
-        </div>
-        <a href="register.html" class="reg_btn"> <p> Register </p></a>
-        <div class="bg_text_last">
-           <h5>To get a Quote, Register here</h5>
-        </div>
-   </div>
-  </section>
-
-  <section id="slider" >
-
-<div class="text_h1">With the Platform, you can ....</div>
-    <div class='slider-wrapper'>
-      <input checked id='slide1' name='slides' type='radio'>
-      <input id='slide2' name='slides' type='radio'>
-      <input id='slide3' name='slides' type='radio'>
-      <div class='slider-arrow-nav'>
-        <label class='nav-arrow prev' for='slide1'></label>
-        <label class='nav-arrow prev' for='slide2'></label>
-        <label class='nav-arrow prev' for='slide3'></label>
-      </div>
-      <div class='slider-arrow-nav'>
-        <label class='nav-arrow next' for='slide1'></label>
-        <label class='nav-arrow next' for='slide2'></label>
-        <label class='nav-arrow next' for='slide3'></label>
-      </div>
-      <div class='slider-nav'>
-        <label class='nav-button' for='slide1'></label>
-        <label class='nav-button' for='slide2'></label>
-        <label class='nav-button' for='slide3'></label>
-      </div>
-      <div class='slider-content'>
-        <div class='slide slide1'>
-          <img src='png/undraw_deliveries_131a (1).png'><br><br>
-          <div class="text_p">Send any courier anywhere as easily as ordering food</div>
-        </div>
-        <div class='slide slide2'>
-          <img src='png/undraw_Destination_6jtj.png'><br><br>
-          <div class="text_p">Get complete transparency  and convenience with our live tracking</div>
-        </div>
-        <div class='slide slide3'>
-          <img src='png/Group 51.png'>
-          <div class="text_p">Place order without the worry of high charges, its free !</div>
-        </div>
-        
       </div>
     </div>
-    
-    
-
 
   </section>
 
-  <section id="setup">
-    
-<div class="setup_container">
-  <div class="setup_text">
-    <div class="setup_h1">How Easy it is</div>
-    <div class="setup_p">With our Platform, you can send Anything, Anywhere in just 2 Minutes<br><br><br><br>
 
-      <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+  <section id="section102">
+
+    <div class="banner"></div>
+    <div class="download_links102">
+      <div class="desk_section102">
+        <h5>We are</h5>
+        <h1>Coming Soon</h1>
+        <h5>To Your Favorite App Store</h5>
+      </div> <br>
+      <div class="mobile_section102">
+        <h1>TMoS Mobile</h1>
+        <p>We're working on TMoS Mobile - an App to help you track <br> all your shipments right from
+          your Mobile Device <br> Enter your Email to get notified and be the first to try out</p>
+
+      </div>
+      <div class="download_images102">
+        <img src="images/Playstore.png" alt="Playstore">
+        <img src="images/Appstore.png" class="appStore_section102" alt="Appstore">
+      </div>
+
+      <div class="grad-bar"></div>
     </div>
-  </div>
-<img src="png/Group 452.png" class="setup_img" alt="">
-</div>
-
-  </section>
 
 
+    <div class="mobile_images102">
 
 
-  <section id="presence">
+      <img src="images/App Mockup4.png" alt="">
 
 
-<div class="presence_container">
-<div class="presence_text1">Our Presence</div>
-<div class="presence_text2">MUMBAI</div>
-<img src="png/Group 450.png" alt="">
-</div>
+    </div>
 
-<div class="presence_box">
-  <div class="presence_text3">Be A Part Of The Revolution</div><br>
-  <a href="register.html" class="reg_btn2">Register Now</a>
-</div>
+    <div class="notify102">
 
-
-  </section>
-
-
-  <footer id="footer">
-   <div class="footer_container">
-
-
-        <div class="links">
-
-
-          <ul class="left_side">
-             <li> <img src="png/TMos Logo-21.png" alt=""> </li>
-             <li> <p>No more paper works or complexity.Automate the whole process and
-              let our Smart AI help you decide the best solution for your logistics <br>
-              transportation management.</p></li>
-              <li><p>© 2019 TMoS Tech Private Limited. All Rights Inclusive</p></li>
-          </ul>
-          <ul class="right_side"> 
-             <li><h1>Navigation</h1></li>
-             <li><a href="index.html">Home</a></li>
-             <li><a href="#">Services</a></li>
-             <li><a href="#">Pricing</a></li>
-             <li><a href="about.html">About Us</a></li>
-          </ul>
-          <ul class="right_side">
-              <li><h1>Legal</h1></li>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Cookies</a></li>
-              <li><a href="#">Copyrights</a></li>
-           </ul>
-           <ul class="right_side mdevice">
-              <li><h1>Contact Us</h1></li>
-              <li class="address"><a href="#">315, Monash Building, <br>    
-                   IIT Bombay Campus,
-                Powai,Mumbai-400076,<br>India</a></li>
-              <li><a href="mailto:info@tmos.global"><i class="fa fa-envelope"></i> info@tmos.global</a></li>
-              <li><a href="tel:+91-8879138857"><i class="fa fa-phone" aria-hidden="true"></i> +91-8879138857</a></li>
-           </ul>
+      <h5>We're working on TMoS Mobile - an App to help you track <br> all your shipments right from
+        your Mobile Device <br> Enter your Email to get notified and be the first to try out</h5>
+      <div class="subscribe">
+        <div class="subscribe__wrapper">
+          <input type="text" id="input" placeholder="Email Address" />
+          <button id="send">
+            <span class="divider"></span>
+            <span class="send">Get Notified</span>
+            <svg width="122.6px" height="250px" viewBox="0 0 122.6 77.9">
+              <g id="p2" transform="scale(2)" fill="#fff">
+                <path d="M62.4,6.9L23.6,45.7c-0.3,0.3-0.9,0.3-1.2,0L0.3,23.7c-0.3-0.3-0.3-0.9,0-1.2l5.4-5.4c0.3-0.3,0.9-0.3,1.2,0l16.1,16.1
+                              L55.8,0.3c0.3-0.3,0.9-0.3,1.2,0l5.4,5.4C62.8,6,62.8,6.5,62.4,6.9L62.4,6.9z" />
+              </g>
+              <g id="p1">
+                <path fill="#FFFFFF" d="M113.6,8.1v61.8H8V8.1H113.6 M121.6,0.1H0v77.8h121.6V0.1L121.6,0.1z" />
+                <polygon fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                  points="9.9,73.1 60.8,48.8 115.5,73.1 " />
+                <polyline id="mail" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10"
+                  points="2.6,3.1 60.8,48.8 118.9,3.6 " />
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                  points="5.4,6.9 60.8,48.8 115.5,6.9 " />
+              </g>
+            </svg>
+          </button>
         </div>
-   </div>
+      </div>
+
+    </div>
+
+    <div class="big_banner">
+      <h1>A single dashboard</h1>
+      <h5>for all your logistic requirements</h5>
+      <div class="grad-bar"></div>
+
+    </div>
+    <div class="component5"><img src="images/component (5).png" alt=""></div>
+  </section>
+
+
+  <section id="balloon103">
+    <div class="balloon_bg103"><img src="images/2.png" alt=""></div>
+    <div class="balloon2_bg103"><img src="images/Untitled-2.png" alt=""></div>
+    <div class="balloon3_bg103"><img src="images/3.png" alt=""></div>
+
+    <div class="heading_103">
+      <h1>With TMoS you can</h1>
+      <div class="grad-bar"></div>
+    </div>
+
+    <figure class="management_103">
+      <img src="images/management.png" alt="">
+      <figcaption>
+        <h1>Easily Manage<br>your Orders Online</h1>
+        <h5>Track and manage orders in a seamless and hassle free way. <br>
+          All it takes , is just a minute !</h5>
+      </figcaption>
+    </figure>
+
+    <figure class="expand_103">
+      <img src="images/expand.png" alt="">
+      <figcaption>
+        <h1>Track your orders<br>in realtime</h1>
+        <h5>Get real-time updates on your orders</h5>
+      </figcaption>
+    </figure>
+
+    <figure class="express_103">
+      <img src="images/delivery.png" alt="">
+      <figcaption>
+        <h1>Best in class prices</h1>
+        <h5>Save more with our cost-effective prices</h5>
+      </figcaption>
+    </figure>
+
+    <figure class="mobile_103">
+
+      <img src="images/mobile.png" alt="">
+      <figcaption>
+        <h1>Generate Automated Receipts</h1>
+        <h5>No more hassles. Experience seamless automatic<br>receipt generation</h5>
+      </figcaption>
+    </figure>
+
+    <figure class="support_103">
+      <img src="images/support.png" alt="">
+      <figcaption>
+        <h1>Receive End to End<br>Support in every step</h1>
+        <h5>We will support you at every step to delivery<br>your growth</h5>
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <br><br>
+
+  <section id="slider_104">
+
+    <!-- <div class="flipper_desktop">
+      <div class="text104">
+        <h1>Utilize Our Expertise</h1>
+        <h3>To Reach Your Perfect Zenith.</h3><br>
+        <div class="grad-bar"></div>
+      </div> <br><br>
+      <div class="scene">
+        <div class="book">
+          <div class="page flipped">
+            <div class="front" style="margin-left: 0;">
+              <h5>Tmos logo/ something</h5>
+              <p></p>
+            </div>
+            <div class="back" style="background-color: white;">
+              <img src="images/undraw_map_1r69.svg" alt="">
+              <div class="arrowLeft104_1"><i class="fa fa-angle-left" style="color: #fff;"></i></div>
+            </div>
+            <div class="middle" style="background-color: white;">
+              <img src="images/undraw_map_1r69.svg" alt="">
+              <div style="position:absolute; width:100%; height: auto;">
+                <div class="arrowRight104_1"><i class="fa fa-angle-right" style="color: #fff;"></i></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="page active">
+            <div class="middle">
+              <img src="images/undraw_visual_data_b1wx.svg" style="background-color: white;" alt="">
+              <div style="position:absolute; width:100%; height: auto;">
+                <div class="arrowRight104_2"><i class="fa fa-angle-right" style="color: #fff;"></i></div>
+              </div>
+            </div>
+            <div class="front">
+              <h5>Online Order Management</h5> <br>
+              <div class="grad-bar"></div> <br> <br>
+              <p>With our Platform, you can now manage all your orders online from all your favourite devices. you also
+                get access to our mobile app which lets you manage and track all your orders using your mobile device.
+                Time Is money and we save you both</p>
+              <a href="">Know More</a>
+            </div>
+            <div class="back">
+              <img src="images/undraw_visual_data_b1wx.svg" style="background-color: white;" alt="">
+              <div class="arrowLeft104_2"><i class="fa fa-angle-left" style="color: #fff;"></i></div>
+              <p></p>
+            </div>
+
+          </div>
+          <div class="page">
+            <div class="middle">
+              <img src="images/undraw_Credit_card_3ed6.svg" style="background-color: white;" alt="">
+              <div style="position:absolute; width:100%; height: auto;">
+                <div class="arrowRight104_3"><i class="fa fa-angle-right" style="color: #fff;"></i></div>
+              </div>
+            </div>
+            <div class="front">
+              <h5>Digital Transactions</h5> <br>
+              <div class="grad-bar"></div> <br> <br>
+              <p>With our Platform, you can now manage all your orders online from all your favourite devices. you also
+                get access to our mobile app which lets you manage and track all your orders using your mobile device.
+                Time Is money and we save you both</p>
+              <a href="">Know More</a>
+            </div>
+            <div class="back">
+              <img src="images/undraw_Credit_card_3ed6.svg" style="background-color: white;" alt="">
+              <div class="arrowLeft104_3"><i class="fa fa-angle-left" style="color: #fff;"></i></div>
+              <p></p>
+            </div>
+
+          </div>
+          <div class="page">
+
+            <div class="front">
+              <h5>Real Time Order Tracking</h5> <br>
+              <div class="grad-bar"></div> <br> <br>
+              <p>With our Platform, you can now manage all your orders online from all your favourite devices. you also
+                get access to our mobile app which lets you manage and track all your orders using your mobile device.
+                Time Is money and we save you both</p>
+              <a href="">Know More</a>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class='cards_mobile'>
+      <h1>About Our Platform</h1>
+      <div data-am-cardslider>
+        <input type="radio" name="card-slider" id="card-slider-1" />
+        <input type="radio" name="card-slider" id="card-slider-2" checked />
+        <input type="radio" name="card-slider" id="card-slider-3" />
+        <div class="cs-slide-container">
+          <label for="card-slider-1" class="cs-slide" style="text-align: center; font-weight: bold;">
+            <div class="cs-slide-content">
+              <div><img src="images/management.png" style="height: 200px; width: 100%;" alt=""></div>
+              Online Order Management
+
+            </div>
+          </label>
+          <label for="card-slider-2" class="cs-slide" style="text-align: center; font-weight: bold;">
+            <div class="cs-slide-content">
+              <div><img src="images/undraw_Credit_card_3ed6.svg" style="height: 200px; width: 90%;" alt=""></div>
+              Digital Transactions
+
+            </div>
+          </label>
+          <label for="card-slider-3" class="cs-slide" style="text-align: center; font-weight: bold;">
+            <div class="cs-slide-content">
+              <div><img src="images/undraw_visual_data_b1wx.svg" style="height: 200px; width: 90%;" alt=""></div>
+              Real Time Order Tracking
+
+            </div>
+          </label>
+        </div>
+        <div class="cs-indicator-container">
+          <label for="card-slider-1" class="cs-indicator"></label>
+          <label for="card-slider-2" class="cs-indicator"></label>
+          <label for="card-slider-3" class="cs-indicator"></label>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="counter_105">
+    <div style="margin: 0 auto; position: relative; width: 70%; height: auto;">
+      <div class="grad-bar"></div>
+    </div>
+    <div class="numbers-counter container">
+      <div class="numbers-list">
+        <ul>
+          <li>
+            <div class="stat-number">
+              <span class="main-counter"><span class="number-inc">0</span>+</span>
+              <h4 class="stat-number-label">Happy Companies</h4>
+            </div>
+
+          </li>
+          <li>
+            <div class="stat-number">
+              <span class="main-counter"><span class="number-inc">0</span>+</span>
+              <h4 class="stat-number-label">Orders Delivered</h4>
+            </div>
+
+          </li>
+          <li>
+            <div class="stat-number">
+              <span class="main-counter"><span class="number-inc">0</span>+</span>
+              <h4 class="stat-number-label">Pincodes Covered</h4>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var url = "http://lvh.me:8000/api/get-website-details/"//"https://tmos.online/api/get-website-details/"
+
+      $.get(url, function (response) {
+        let responseData = JSON.parse(response);
+        console.log(responseData);
+        let dataList = [];
+        dataList.push(Math.ceil((responseData.totalCompanies/10))*10);
+        dataList.push(Math.ceil((responseData.totalOrders/500))*500);
+        dataList.push(Math.ceil((responseData.totalPincodes/100))*100);
+
+        $('.number-inc').each(function (index) {
+          var $this = $(this),
+            countTo = dataList[index];
+
+          $({ countNum: $this.text() }).animate({
+            countNum: countTo
+          },
+            {
+              duration: 1500,
+              easing: 'linear',
+              step: function () {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function () {
+                $this.text(this.countNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+              }
+            });
+        });
+      });
+    </script>
+
+    <div class="presence_105">
+      <div class="small_area105">
+        <h1>Our Presence</h1>
+      </div>
+      <div class="grad-bar"></div>
+      <img src="images/Untitled-1.png" alt="">
+    </div>
+  </section>
+
+
+
+
+
+
+  <footer>
+    <div class="footer-wrap">
+      <div class="about_foot">
+        <img src="images/tmos_color.png" alt=""> <br><br><br>
+        <h4>About US</h4> <br>
+        <p>TMoS is an Intelligent Hyperlocal Delivery Platform, <br> serving and helping small business owners by <br>
+          providing them Delivery Service.</p>
+      </div>
+      <div class="foot_right">
+
+        <div class="info-links">
+          <h4>Information</h4>
+          <a href="#">About TMoS</a>
+          <a href="#">Blog</a>
+          <a href="#">Testimonials</a>
+          <a href="#">Partners</a>
+          <a href="#">Media Coverage</a>
+        </div>
+
+        <div class="help-links">
+          <h4>Helpful Links</h4>
+          <a href="#">Services</a>
+          <a href="#">Supports</a>
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="contact_foot">
+          <h4>Contact US</h4>
+          <a href="#">+91 – 8879138857</a>
+          <a href="#">prakhar@tmos.global</a>
+        </div>
+
+      </div>
+
+
+    </div><br>
+    <div class="footer_mobileWrap">
+      <div class="head_flexItem">
+        <img src="images/tmos_color.png" alt="">
+        <div class="head_contact">
+          <a href=""><i class="fa fa-mobile" aria-hidden="true"
+              style="color: #00ECE1; font-size: 30px; padding-right: 5px;"></i> +91 – 8879138857</a>
+          <a href=""><i class="fa fa-envelope" aria-hidden="true"
+              style="color: #00ECE1; font-size: 20px; padding-right: 5px;"></i>prakhar@tmos.global</a>
+        </div>
+      </div>
+      <p style="margin-top: 20px; font-size: 13px; letter-spacing: 1px;">TMoS is an Intelligent Hyperlocal Delivery
+        Platform, serving and helping small business owners by providing them Delivery Service.</p>
+
+
+      <div class="flex_mobileLinks">
+
+        <div class="info-links">
+          <h4>Information</h4>
+          <a href="#">About TMoS</a>
+          <a href="#">Blog</a>
+          <a href="#">Testimonials</a>
+          <a href="#">Partners</a>
+          <a href="#">Media Coverage</a>
+        </div>
+
+        <div class="help-links">
+          <h4>Helpful Links</h4>
+          <a href="#">Services</a> <br>
+          <a href="#">Supports</a> <br>
+          <a href="#">Terms and Conditions</a> <br>
+          <a href="#">Privacy Policy</a>
+        </div>
+
+      </div> <br>
+
+
+    </div> <br>
+    <div style="margin: 0 0px;">
+      <hr> <br>
+      <div class="copyright">&copy; 2019 TMoS Tech Private Limited. All Rights Inclusive.</div>
+    </div>
   </footer>
 
 
-  <script src="js/nav.js"></script>
-<script src="slider.js"></script>
 
+
+
+
+
+
+
+
+
+  <script src="js/nav.js"></script>
+  <script src="js/dynamic.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/emailValidation.js"></script>
+  <script src="js/homeOverlay.js"></script>
 </body>
+
 </html>

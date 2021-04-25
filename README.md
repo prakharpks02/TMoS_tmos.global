@@ -1,2 +1,2 @@
-# TMoS_tmos.global
-This is the repository that is being hosted as a website for tmos.global
+# website_anup
+This is the Git repository for beta version of second website of TMoS that is being developed by Anup under supervision of Anish.

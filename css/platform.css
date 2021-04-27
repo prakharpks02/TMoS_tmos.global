@@ -1572,6 +1572,10 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
   }
 
+  #worked_section .company_imageBundle_container {
+    overflow-y: auto;
+  }
+
   .company_imageBundle img {
     width: 100px;
     padding: 10px;

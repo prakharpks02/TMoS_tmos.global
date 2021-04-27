@@ -1966,6 +1966,7 @@ svg {
   height: auto;
   overflow: hidden;
   padding: 100px;
+  margin: auto;
 }
 
 .presence_105 img {
@@ -1987,6 +1988,21 @@ svg {
   float: right;
   width: 150px;
 }
+/* 
+.location-list-container {
+  margin: auto;
+  width: 90%;
+}
+
+.location-list-row {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.image-column-container {
+  flex: 50%;
+} */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #counter_105 {

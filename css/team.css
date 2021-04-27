@@ -1064,6 +1064,10 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid #23D5AB;
 }
 
+.snehal-image {
+  object-fit: scale-down;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #alpha {
     height: 700px;

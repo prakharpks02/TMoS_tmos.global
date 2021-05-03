@@ -583,7 +583,7 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #background {
-    height: 100vh;
+    height: 105vh;
   }
   #background .bg_text {
     padding-top: 140px;
@@ -718,6 +718,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .mobile_images102 {
+  background-image: url(../images/platform-services.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: white;
   position: absolute;
   width: 100%;
   z-index: 21;
@@ -944,12 +949,17 @@ svg {
     position: absolute;
     right: 0px;
   }
+  #section102 .mobile_images102 {
+    background-image: url(../images/platform-services-half.png);
+    background-position-y: 5%;
+    background-size: 80% auto;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #section102 {
     background: white;
-    height: 85vh;
+    height: 60vh;
     padding: 0;
     box-sizing: border-box;
     margin: 0;
@@ -993,10 +1003,10 @@ svg {
     justify-content: center;
     width: 100%;
   }
-  #section102 .mobile_images102 {
+  /* #section102 .mobile_images102 {
     display: flex;
     justify-content: center;
-  }
+  } */
   #section102 .download_links102 .download_images102 img {
     width: 150px;
     margin-top: 20px;
@@ -1017,7 +1027,7 @@ svg {
 @media only screen and (max-width: 320px) {
   #section102 {
     background: white;
-    height: 100vh;
+    height: 60vh;
     padding: 0;
     box-sizing: border-box;
     margin: 0;

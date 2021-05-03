@@ -793,15 +793,16 @@ body::-webkit-scrollbar-thumb {
     margin-top: 50px;
     float: right;
     margin-left: 500px;
+    z-index: 999;
   }
 
   .newletter_btn {
     display: none;
   }
 
-  .rocket_right .rocket_buttons button {
+  /* .rocket_right .rocket_buttons button {
     z-index: 999;
-  }
+  } */
 
   .grad-bar {
     display: none;

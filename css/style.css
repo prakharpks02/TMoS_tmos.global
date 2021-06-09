@@ -721,7 +721,7 @@ body::-webkit-scrollbar-thumb {
   background-image: url(../images/platform-services.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 95%;
   background-color: white;
   position: absolute;
   width: 100%;
@@ -1299,7 +1299,7 @@ svg {
   margin-left: 50px;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width:1150px) {
   #balloon103 {
     height: 100vh;
   }
@@ -1723,7 +1723,7 @@ svg {
   display: none;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1150px) {
   .flipper_desktop {
     display: none;
   }
@@ -1975,7 +1975,7 @@ svg {
   width: 100%;
   height: auto;
   overflow: hidden;
-  padding: 100px;
+  padding: 50px;
   margin: auto;
 }
 
@@ -1985,6 +1985,7 @@ svg {
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
+  overflow-x: auto;
 }
 
 .presence_105 .small_area105 {
@@ -2025,7 +2026,7 @@ svg {
   }
   .presence_105 .small_area105 h1 {
     padding: 0;
-    margin-top: -70px;
+    margin-top: 0;
     box-sizing: border-box;
     font-size: 25px;
     text-align: center;
@@ -2089,11 +2090,11 @@ footer {
 }
 
 .footer-wrap .about_foot {
-  width: 30%;
+  width: 50% !important;
 }
 
 .footer-wrap .about_foot img {
-  width: 30%;
+  width: 70%;
 }
 
 .foot_right a {
@@ -2106,8 +2107,8 @@ footer {
 .foot_right {
   display: flex;
   float: right;
-  width: 90%;
-  margin-left: 350px;
+  width: 70%;
+  margin-left: 20%;
 }
 
 .footer-wrap h4 {
@@ -2132,6 +2133,56 @@ footer {
 
 .footer_mobileWrap {
   display: none;
+}
+
+
+@media only screen and (max-width: 760px) {
+  footer {
+    padding: 10px;
+    height: 75vh;
+  }
+  .footer_mobileWrap {
+    display: block;
+  }
+  .footer-wrap {
+    display: none;
+  }
+  .head_flexItem {
+    display: flex;
+  }
+  .head_flexItem img {
+    width: 30%;
+    height: 40px;
+  }
+  .head_flexItem .head_contact {
+    float: right;
+    margin-left: 50px;
+  }
+  .head_flexItem .head_contact a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  .flex_mobileLinks {
+    display: flex;
+    margin-top: 20px;
+  }
+  .flex_mobileLinks a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .flex_mobileLinks h4 {
+    color: #00ece1;
+    margin-bottom: 10px;
+  }
+  .flex_mobileLinks .info-links {
+    width: 30%;
+    margin-right: 75px;
+    margin-left: -50px;
+  }
+  .flex_mobileLinks .help-links {
+    width: 70%;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

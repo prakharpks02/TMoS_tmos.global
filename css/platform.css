@@ -159,14 +159,24 @@ body::-webkit-scrollbar-thumb {
 }
 
 .grad-bar {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
   width: 100%;
-  height: 7px;
-  background: linear-gradient(-45deg, rgb(8, 90, 138), #00ECE1, rgb(119, 119, 245), #23D5AB);
+  height: fit-content;
+  text-align: center;
+  background-color: #00ece1;
+  /* background: linear-gradient( -45deg, rgb(8, 90, 138), #00ece1, rgb(119, 119, 245), #23d5ab);
   background-size: 400% 400%;
   -webkit-animation: gradbar 5s ease infinite;
   -moz-animation: gradbar 5s ease infinite;
-  animation: gradbar 5s ease infinite;
+  animation: gradbar 5s ease infinite; */
 }
+
+/* .grad-bar a {
+  color: rgb(0, 0, 0);
+} */
 
 /* NAVIGATION */
 

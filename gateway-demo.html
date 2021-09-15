@@ -36,14 +36,14 @@
 
 		<div class="column-container application-container">
 
-			<div class="ecommerce-container box">
+			<div class="ecommerce-container box" v-if="pageStatus=='cart'">
 				<p>CART</p>
 				<br>
 				<div class="columns is-multiline">
 
 					<div class="column is-full cart-item-container box">
 						<div class="image is-64x64">
-							<img src="images/Prakhar Profile Pic.png">
+							<img src="images/Floor.png">
 						</div>
 						<div class="cart-detail-container">
 							<p class="cart-title">
@@ -56,7 +56,7 @@
 					</div>
 					<div class="column is-full cart-item-container box">
 						<div class="image is-64x64">
-							<img src="images/Prakhar Profile Pic.png">
+							<img src="images/Floor.png">
 						</div>
 						<div class="cart-detail-container">
 							<p class="cart-title">
@@ -85,14 +85,40 @@
 					</div>
 				</div>
 
-				<br><br>
-
 				<div class="chekout-button-container">
-					<button class="button">Checkout &#8594</button>
+					<button class="button" v-on:click="CheckoutButton">Checkout &#8594</button>
 				</div>
 			</div>
 
-			<div class="gateway-container box">
+			<div class="gateway-container box" v-if="pageStatus=='gateway'">
+
+				<div class="gateway-cross-container">
+					<span class="icon">
+						<i class="fa fa-times fa-3x" v-on:click="pageStatus='cart'"></i>
+					</span>
+				</div>
+
+				<div class="vendor-list-container">
+					<div class="vendor-container">
+
+						<div class="radio-container">
+							<label>
+								<input type="radio" class="radio-button-default" name="vendorName">
+								<span class="radio-button-custom"></span>
+							</label>
+						</div>
+
+						<div class="vendor-details-container">
+							<p class="vendor-title">Vega Delivery</p>
+							<p class="vendor-eta">ETA: 6th October, 2021</p>
+						</div>
+
+						<div class="vendor-image-container">
+							
+						</div>
+
+					</div>
+				</div>
 
 			</div>
 
@@ -105,7 +131,7 @@
 	</div>
 
 	<script src="js/countryCode.js"></script>
-	<script src="js/account.js"></script>
+	<script src="js/gateway-demo.js"></script>
 </body>
 
 </html>

@@ -20,6 +20,7 @@
 
 html {
     overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .full-page-container {
@@ -42,10 +43,19 @@ html {
 
 .document-container {
     background-color: rgba(83, 138, 255, 0.719);
+    position: relative;
 }
 
 .options-container {
     background-color: rgba(253, 253, 0, 0.692);
+    position: relative;
+}
+
+.document-button-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
 }
 
 /* ------------------ Cart CSS */
@@ -84,6 +94,28 @@ html {
     background-color: #00ceb1;
 }
 
+.document-cross-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 3%;
+    margin-right: 3%;
+    cursor: pointer;
+    color: #575757;
+    display: none;
+}
+
+.options-cross-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 3%;
+    margin-right: 3%;
+    cursor: pointer;
+    color: #575757;
+    display: none;
+}
+
 /* ------------------ Gateway CSS */
 
 .gateway-container {
@@ -107,7 +139,7 @@ html {
 .vendor-list-container {
     padding: 5px;
     width: 100%;
-    height: 80%;
+    height: 70%;
     overflow-y: auto;
     margin: auto;
     margin-top: 50px;
@@ -116,29 +148,36 @@ html {
 .vendor-container {
     width: 95%;
     margin: auto;
+    margin-bottom: 20px;
     display: flex;
     border-radius: 5px;
     padding: 2px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* transition: all 0.5s; */
+}
+
+.vendor-container-active {
+    border: 2px solid #00ceb1;
+    margin-bottom: 18px;
 }
 
 /* Radio Button Starts */
 .radio-container {
     position: relative;
-    flex: auto;
+    flex: content;
+    padding: 10px;
 }
 
 .radio-container input {
-    position: absolute;
+    /* position: absolute;
+    top: 0; */
     opacity: 0;
-    top: 0;
     cursor: pointer;
 }
 
 .radio-button-custom {
     position: absolute;
-    top: 0;
-    left: 0;
+    left: 5px;
     height: 25px;
     width: 25px;
     background-color: #eee;
@@ -169,21 +208,80 @@ html {
 .radio-container input:checked~.radio-button-custom:after {
     display: block;
 }
+
 /* Radio Button Ends */
 
 .vendor-details-container {
-    flex: 80%;
+    flex: 60%;
     padding-left: 10px;
 }
 
 .vendor-title {
+    font-size: 20px;
     font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .vendor-eta {
     color: rgb(194, 194, 194);
-    font-size: 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.vendor-cost-container {
+    flex: 20%;
+    text-align: center;
+}
+
+.vendor-cost {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.selected-vendor-container {
+    border-top: 2px solid #575757;
+    padding-top: 10px;
+    width: 90%;
+    height: 20%;
+    margin: auto;
+    position: relative;
+}
+
+.selected-vendor {
+    width: 100%;
+    height: 50%;
+}
+
+.selected-vendor-button {
+    width: 80%;
+    margin: auto;
+}
+
+.selected-vendor-button button {
+    background-color: #00ceb1;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+
+}
+
+.success-container {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.success-center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+}
+
+.success-title {
+    font-size: 30px;
+    color: #00ceb1;
     font-weight: 700;
 }
 
@@ -191,8 +289,16 @@ html {
     .document-container {
         display: none;
     }
-
     .options-container {
         display: none;
+    }
+    .document-button-container {
+        display: block;
+    }
+    .document-cross-container {
+        display: block;
+    }
+    .options-cross-container {
+        display: block;
     }
 }

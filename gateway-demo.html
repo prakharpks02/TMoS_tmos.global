@@ -30,11 +30,21 @@
 
 	<div class="full-page-container" id="main-page-container-id">
 
-		<div class="column-container document-container">
+		<div class="document-button-container">
+			<button class="button" v-on:click="OpenDocumentation">Documentation</button>
+			<button class="button" v-on:click="OpenOptions">Options</button>
+		</div>
+
+		<div class="column-container document-container" id="document-container-id">
+			<div class="document-cross-container">
+				<span class="icon">
+					<i class="fa fa-times fa-3x" v-on:click="OpenGateway"></i>
+				</span>
+			</div>
 			<p>Documentation</p>
 		</div>
 
-		<div class="column-container application-container">
+		<div class="column-container application-container" id="gateway-container-id">
 
 			<div class="ecommerce-container box" v-if="pageStatus=='cart'">
 				<p>CART</p>
@@ -71,7 +81,7 @@
 				</div>
 
 				<div class="total-container">
-					<div class="level">
+					<div class="level is-mobile">
 						<div class="level-left">
 							<div class="level-item">
 								<span class="cart-title">Total</span>
@@ -99,32 +109,71 @@
 				</div>
 
 				<div class="vendor-list-container">
-					<div class="vendor-container">
+
+					<div class="vendor-container" v-for="vendor in vendorList">
 
 						<div class="radio-container">
 							<label>
-								<input type="radio" class="radio-button-default" name="vendorName">
+								<input type="radio" class="radio-button-default" name="VendorName"
+									v-on:click="RadioClick(vendor.id, vendor.name, vendor.eta, vendor.cost,$event)">
 								<span class="radio-button-custom"></span>
 							</label>
 						</div>
 
 						<div class="vendor-details-container">
-							<p class="vendor-title">Vega Delivery</p>
-							<p class="vendor-eta">ETA: 6th October, 2021</p>
+							<p class="vendor-title">[[vendor.name]]</p>
+							<p class="vendor-eta">[[vendor.eta]]</p>
 						</div>
 
-						<div class="vendor-image-container">
-							
+						<div class="vendor-cost-container">
+							<p class="vendor-cost">
+								₹[[vendor.cost]]
+							</p>
 						</div>
 
+					</div>
+
+				</div>
+
+				<div class="selected-vendor-container">
+					<div class="selected-vendor columns is-mobile is-vcentered has-text-centered">
+						<div class="column">
+							<p class="vendor-title">[[selectedVendor.name]]</p>
+						</div>
+						<div class="column">
+							<p class="vendor-eta">[[selectedVendor.eta]]</p>
+						</div>
+					</div>
+
+					<div class="selected-vendor-button">
+						<button class="button" :disabled="selectedVendor.cost <= 0" v-on:click="ConfirmDelivery">
+							Confirm Delivery ₹[[selectedVendor.cost]]
+						</button>
 					</div>
 				</div>
 
 			</div>
 
+			<div class="success-container box" v-if="pageStatus=='success'">
+				<div class="gateway-cross-container">
+					<span class="icon">
+						<i class="fa fa-times fa-3x" v-on:click="pageStatus='cart'"></i>
+					</span>
+				</div>
+
+				<div class="success-center-container">
+					<p class="success-title">Success</p>
+				</div>
+			</div>
+
 		</div>
 
-		<div class="column-container options-container">
+		<div class="column-container options-container" id="options-container-id">
+			<div class="options-cross-container">
+				<span class="icon">
+					<i class="fa fa-times fa-3x" v-on:click="OpenGateway"></i>
+				</span>
+			</div>
 			<p>Options</p>
 		</div>
 

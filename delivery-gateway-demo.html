@@ -53,7 +53,7 @@
 
 					<div class="column is-full cart-item-container box">
 						<div class="image is-64x64">
-							<img src="images/Floor.png">
+							<img src="images/banana.jpg">
 						</div>
 						<div class="cart-detail-container">
 							<p class="cart-title">
@@ -66,7 +66,7 @@
 					</div>
 					<div class="column is-full cart-item-container box">
 						<div class="image is-64x64">
-							<img src="images/Floor.png">
+							<img src="images/banana.jpg">
 						</div>
 						<div class="cart-detail-container">
 							<p class="cart-title">
@@ -174,7 +174,123 @@
 					<i class="fa fa-times fa-3x" v-on:click="OpenGateway"></i>
 				</span>
 			</div>
-			<p>Options</p>
+			<div class="quick-action-container box">
+				<p class="subtitle">Delivery Gateway<br>Customizations</p>
+
+				<div class="quick-action-form-container">
+					<div class="field">
+						<label class="label">Gateway Theme
+							<div class="custom-tooltip">&#9432
+								<span class="custom-tooltiptext-wrapper"><span class="custom-tooltiptext">Change the way
+										your gateway looks</span></span>
+							</div>
+						</label>
+						<div class="control">
+							<input class="input" type="color" v-model="options.color">
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="label">Delivery Limit
+							<div class="custom-tooltip">&#9432
+								<span class="custom-tooltiptext-wrapper"><span class="custom-tooltiptext">Control the no
+										of delivery options shown to user</span></span>
+							</div>
+						</label>
+						<div class="control">
+							<input class="input" type="number" v-model="options.limit">
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="label">Company Name
+							<div class="custom-tooltip">&#9432
+								<span class="custom-tooltiptext-wrapper"><span class="custom-tooltiptext">This is yours,
+										so do put your name on it</span></span>
+							</div>
+						</label>
+						<div class="control">
+							<input class="input" type="text" v-model="options.companyName">
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="label">Favourite Vendors
+							<div class="custom-tooltip">&#9432
+								<span class="custom-tooltiptext-wrapper"><span class="custom-tooltiptext">Choose the
+										Vendors that you recommend for your
+										users</span></span>
+							</div>
+						</label>
+						<div class="control">
+							<input class="input" type="text" v-model="options.favVendors">
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="label">Your Discount
+							<div class="custom-tooltip">&#9432
+								<span class="custom-tooltiptext-wrapper"><span class="custom-tooltiptext">That amount
+										that you would pay for each order instead
+										of
+										User</span></span>
+							</div>
+						</label>
+						<div class="field has-addons">
+							<p class="control">
+								<a class="button is-static">
+									₹
+								</a>
+							</p>
+							<p class="control">
+								<input class="input" type="number" v-model="options.discount">
+							</p>
+						</div>
+					</div>
+
+
+					<label class="label">
+						<input type="checkbox" v-model="options.freeDelivery">
+						Free Delivery
+						<div class="custom-tooltip">&#9432
+							<span class="custom-tooltiptext-wrapper"><span class="custom-tooltiptext">You can pay
+									instead of your users for the delivery</span></span>
+						</div>
+					</label>
+
+					<div class="field">
+						<label class="label">
+							<input type="checkbox" v-model="options.selfDelivery">
+							Self Delivery
+							<div class="custom-tooltip">&#9432
+								<span class="custom-tooltiptext-wrapper"><span class="custom-tooltiptext">Adds a Self
+										Delivery option with below delivery cost, so you can take care of delivery
+										yourself</span></span>
+							</div>
+						</label>
+						<div class="field has-addons">
+							<p class="control">
+								<a class="button is-static">
+									₹
+								</a>
+							</p>
+							<p class="control">
+								<input class="input" type="number" v-model="options.selfDeliveryCost">
+							</p>
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+				<div class="quick-action-buttons-container">
+
+				</div>
+
+
+			</div>
 		</div>
 
 	</div>

@@ -37,6 +37,16 @@ var app1 = new Vue({
             'cost': 0,
             'eta': '',
         },
+        'options': {
+            'color': '#FFFFFF',
+            'limit': 4,
+            'companyName': '',
+            'favVendors': [],
+            'discount': 0,
+            'freeDelivery': false,
+            'selfDelivery': false,
+            'selfDeliveryCost': 0,
+        },
     },
     methods: {
         CheckoutButton: function () {
@@ -70,19 +80,19 @@ var app1 = new Vue({
             this.pageStatus = 'success';
         },
         OpenDocumentation: function () {
-            document.getElementById("document-container-id").style.display="block";
-            document.getElementById("options-container-id").style.display="none";
-            document.getElementById("gateway-container-id").style.display="none";
+            document.getElementById("document-container-id").style.display = "block";
+            document.getElementById("options-container-id").style.display = "none";
+            document.getElementById("gateway-container-id").style.display = "none";
         },
         OpenOptions: function () {
-            document.getElementById("document-container-id").style.display="none";
-            document.getElementById("options-container-id").style.display="block";
-            document.getElementById("gateway-container-id").style.display="none";
+            document.getElementById("document-container-id").style.display = "none";
+            document.getElementById("options-container-id").style.display = "block";
+            document.getElementById("gateway-container-id").style.display = "none";
         },
         OpenGateway: function () {
-            document.getElementById("document-container-id").style.display="none";
-            document.getElementById("options-container-id").style.display="none";
-            document.getElementById("gateway-container-id").style.display="block";
+            document.getElementById("document-container-id").style.display = "none";
+            document.getElementById("options-container-id").style.display = "none";
+            document.getElementById("gateway-container-id").style.display = "block";
         },
     },
 });

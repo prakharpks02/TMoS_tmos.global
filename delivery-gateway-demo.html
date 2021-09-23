@@ -38,10 +38,10 @@
 		<div class="column-container document-container" id="document-container-id">
 			<div class="document-cross-container">
 				<span class="icon">
-					<i class="fa fa-times fa-3x" v-on:click="OpenGateway"></i>
+					<i class="fa fa-times fa-2x" v-on:click="OpenGateway"></i>
 				</span>
 			</div>
-			<p>Documentation</p>
+			<p class="subtitle">Documentation</p>
 		</div>
 
 		<div class="column-container application-container" id="gateway-container-id">
@@ -104,9 +104,20 @@
 
 				<div class="gateway-cross-container">
 					<span class="icon">
-						<i class="fa fa-times fa-3x" v-on:click="pageStatus='cart'"></i>
+						<i class="fa fa-times fa-2x" v-on:click="pageStatus='cart'"></i>
 					</span>
 				</div>
+
+				<div class="company-detail-container color-change-variable">
+					<div class="company-logo-container">
+						<img src="images/random-logo.png">
+					</div>
+					<div class="company-name-container">
+						<p>[[options.companyName]]</p>
+					</div>
+				</div>
+
+				<br>
 
 				<div class="vendor-list-container">
 
@@ -146,7 +157,7 @@
 					</div>
 
 					<div class="selected-vendor-button">
-						<button class="button" :disabled="selectedVendor.cost <= 0" v-on:click="ConfirmDelivery">
+						<button class="button color-change-variable" :disabled="selectedVendor.cost <= 0" v-on:click="ConfirmDelivery">
 							Confirm Delivery ₹[[selectedVendor.cost]]
 						</button>
 					</div>
@@ -157,7 +168,7 @@
 			<div class="success-container box" v-if="pageStatus=='success'">
 				<div class="gateway-cross-container">
 					<span class="icon">
-						<i class="fa fa-times fa-3x" v-on:click="pageStatus='cart'"></i>
+						<i class="fa fa-times fa-2x" v-on:click="pageStatus='cart'"></i>
 					</span>
 				</div>
 
@@ -171,7 +182,7 @@
 		<div class="column-container options-container" id="options-container-id">
 			<div class="options-cross-container">
 				<span class="icon">
-					<i class="fa fa-times fa-3x" v-on:click="OpenGateway"></i>
+					<i class="fa fa-times fa-2x" v-on:click="OpenGateway"></i>
 				</span>
 			</div>
 			<div class="quick-action-container box">
@@ -186,7 +197,7 @@
 							</div>
 						</label>
 						<div class="control">
-							<input class="input" type="color" v-model="options.color">
+							<input class="input" type="color" v-model="options.color" v-on:change="ChangeColor">
 						</div>
 					</div>
 

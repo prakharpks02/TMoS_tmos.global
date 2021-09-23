@@ -28,7 +28,7 @@ var app1 = new Vue({
     el: '#main-page-container-id',
     delimiters: ['[[', ']]'],
     data: {
-        'pageStatus': 'cart',
+        'pageStatus': 'gateway',
         'vendorList': vendorListVar,
         'allVendorList': vendorListVar,
         'selectedVendor': {
@@ -36,6 +36,16 @@ var app1 = new Vue({
             'id': '',
             'cost': 0,
             'eta': '',
+        },
+        'options': {
+            'color': 'rgb(0, 255, 200)',
+            'limit': 4,
+            'companyName': 'Your Company',
+            'favVendors': [],
+            'discount': 0,
+            'freeDelivery': false,
+            'selfDelivery': false,
+            'selfDeliveryCost': 0,
         },
     },
     methods: {
@@ -70,19 +80,40 @@ var app1 = new Vue({
             this.pageStatus = 'success';
         },
         OpenDocumentation: function () {
-            document.getElementById("document-container-id").style.display="block";
-            document.getElementById("options-container-id").style.display="none";
-            document.getElementById("gateway-container-id").style.display="none";
+            document.getElementById("document-container-id").style.display = "block";
+            document.getElementById("options-container-id").style.display = "none";
+            document.getElementById("gateway-container-id").style.display = "none";
         },
         OpenOptions: function () {
-            document.getElementById("document-container-id").style.display="none";
-            document.getElementById("options-container-id").style.display="block";
-            document.getElementById("gateway-container-id").style.display="none";
+            document.getElementById("document-container-id").style.display = "none";
+            document.getElementById("options-container-id").style.display = "block";
+            document.getElementById("gateway-container-id").style.display = "none";
         },
         OpenGateway: function () {
-            document.getElementById("document-container-id").style.display="none";
-            document.getElementById("options-container-id").style.display="none";
-            document.getElementById("gateway-container-id").style.display="block";
+            document.getElementById("document-container-id").style.display = "none";
+            document.getElementById("options-container-id").style.display = "none";
+            document.getElementById("gateway-container-id").style.display = "block";
+        },
+        ChangeColor: function () {
+            let selectedElements = document.getElementsByClassName('color-change-variable')
+            for(let i=0; i<selectedElements.length; i++) {
+                selectedElements[i].style.backgroundColor = this.options.color;
+            }
+        },
+        ChangeLimit: function () {
+
+        },
+        ChangeDiscount: function () {
+
+        },
+        ChangeFreeDel: function () {
+
+        },
+        ChangeSelfDel: function () {
+
         },
     },
+    mounted() {
+        this.ChangeColor();
+    }
 });

@@ -28,7 +28,7 @@ var app1 = new Vue({
     el: '#main-page-container-id',
     delimiters: ['[[', ']]'],
     data: {
-        'pageStatus': 'gateway',
+        'pageStatus': 'cart',
         'vendorList': vendorListVar,
         'allVendorList': vendorListVar,
         'selectedVendor': {

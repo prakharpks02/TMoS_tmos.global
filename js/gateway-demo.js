@@ -28,7 +28,13 @@ var app1 = new Vue({
     el: '#main-page-container-id',
     delimiters: ['[[', ']]'],
     data: {
-        'pageStatus': 'gateway',
+        'pageStatus': 'cart',
+        'cost': {
+            'subtotal': 100,
+            'delivery': 0,
+            'total': 100,
+        },
+        'paymentStatus' : 'cart',
         'vendorList': vendorListVar,
         'allVendorList': vendorListVar,
         'selectedVendor': {
@@ -77,7 +83,17 @@ var app1 = new Vue({
             this.selectedVendor.cost = parseFloat(vendorcost);
         },
         ConfirmDelivery: function () {
+            this.cost.delivery = this.selectedVendor.cost;
+            console.log(this.cost.delivery);
+            this.cost.total = parseFloat(this.cost.subtotal) + parseFloat(this.cost.delivery);
+            this.pageStatus = 'cart';
+            this.paymentStatus = 'pay';
+        },
+        PayButton: function () {
             this.pageStatus = 'success';
+            this.paymentStatus = 'cart';
+            this.cost.total = this.cost.subtotal;
+            this.cost.delivery = 0;
         },
         OpenDocumentation: function () {
             document.getElementById("document-container-id").style.display = "block";
@@ -96,7 +112,7 @@ var app1 = new Vue({
         },
         ChangeColor: function () {
             let selectedElements = document.getElementsByClassName('color-change-variable')
-            for(let i=0; i<selectedElements.length; i++) {
+            for (let i = 0; i < selectedElements.length; i++) {
                 selectedElements[i].style.backgroundColor = this.options.color;
             }
         },

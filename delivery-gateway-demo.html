@@ -41,7 +41,55 @@
 					<i class="fa fa-times fa-2x" v-on:click="OpenGateway"></i>
 				</span>
 			</div>
-			<p class="subtitle">Documentation</p>
+
+			<div class="document-detail-container box">
+				<p class="subtitle">Our Progress</p>
+
+				<ul class="document-list-container">
+					<li>This is a basic level visual prototype for demonstration purposes</li>
+					<li>This example explains the flow and concept of Delivery Gateway</li>
+					<li>We are working continuously to bring the Alpha build as you read</li>
+					<li>Alpha build would soon be available on the <a href="https://tmos.online" target="_blank">TMoS Platform</a>
+					</li>
+				</ul>
+
+				<br><br><br>
+				<p class="subtitle">The Flow</p>
+
+				<div class="document-flow-container">
+					<div class="columns is-mobile is-multiline is-vcentered is-centered is-variable is-1">
+						<div class="column">
+							<span>Checkout</span>
+						</div>
+						<div class="column is-narrow">
+							<span class="fa fa-arrow-right"></span>
+						</div>
+						<div class="column">
+							<span>Select Delivery</span>
+						</div>
+						<div class="column is-narrow">
+							<span class="fa fa-arrow-right"></span>
+						</div>
+						<div class="column">
+							<span>Confirm Delivery</span>
+						</div>
+						<div class="column is-narrow">
+							<span class="fa fa-arrow-down"></span>
+						</div>
+						<div class="column">
+							<span>After Payment Confirm, Success</span>
+						</div>
+						<div class="column is-narrow">
+							<span class="fa fa-arrow-left"></span>
+						</div>
+						<div class="column">
+							<span>Check Total and Pay</span>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
 		</div>
 
 		<div class="column-container application-container" id="gateway-container-id">
@@ -66,14 +114,27 @@
 					</div>
 					<div class="column is-full cart-item-container box">
 						<div class="image is-64x64">
-							<img src="images/banana.jpg">
+							<img src="images/apple.jpg">
 						</div>
 						<div class="cart-detail-container">
 							<p class="cart-title">
-								Banana
+								Apple
 							</p>
 							<p class="cart-subtitle">
-								Yellow fresh bananas
+								Red Shimla Apples
+							</p>
+						</div>
+					</div>
+					<div class="column is-full cart-item-container mobile-hide-class box">
+						<div class="image is-64x64">
+							<img src="images/orange.jpg">
+						</div>
+						<div class="cart-detail-container">
+							<p class="cart-title">
+								Orange
+							</p>
+							<p class="cart-subtitle">
+								Fresh Nagpur Orange
 							</p>
 						</div>
 					</div>
@@ -81,22 +142,29 @@
 				</div>
 
 				<div class="total-container">
-					<div class="level is-mobile">
-						<div class="level-left">
-							<div class="level-item">
-								<span class="cart-title">Total</span>
-							</div>
+					<div class="columns is-mobile">
+						<div class="column is-half">
+							<p class="cart-total">Subtotal</p>
+							<p class="cart-delivery">Delivery Cost</p>
+							<br>
+							<p class="cart-total">Total</p>
 						</div>
-						<div class="level-right">
-							<div class="level-item">
-								<span class="cart-title">₹ 250</span>
-							</div>
+						<div class="column is-half has-text-right">
+							<p class="cart-total">₹ [[cost.subtotal]]</p>
+							<p class="cart-delivery">₹ [[cost.delivery]]</p>
+							<br>
+							<p class="cart-total">₹ [[cost.total]]</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="chekout-button-container">
-					<button class="button" v-on:click="CheckoutButton">Checkout &#8594</button>
+					<button class="button" v-on:click="CheckoutButton" v-if="paymentStatus=='cart'">Checkout <span
+							style="color: transparent;">
+							.</span><i class="fa fa-arrow-right"></i></button>
+
+					<button class="button" v-on:click="PayButton" v-if="paymentStatus=='pay'">Pay
+						₹[[cost.total]]</button>
 				</div>
 			</div>
 
@@ -157,7 +225,8 @@
 					</div>
 
 					<div class="selected-vendor-button">
-						<button class="button color-change-variable" :disabled="selectedVendor.cost <= 0" v-on:click="ConfirmDelivery">
+						<button class="button color-change-variable" :disabled="selectedVendor.cost <= 0"
+							v-on:click="ConfirmDelivery">
 							Confirm Delivery ₹[[selectedVendor.cost]]
 						</button>
 					</div>
